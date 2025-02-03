@@ -4,17 +4,22 @@ import Header from "./Components/Header/Header";
 
 const App: React.FC = () => {
   return (
-    <Box
-      style={{ padding: "20px" }}
-      sx={{
-        alignItems: "center",
-        border: "1px solid red",
-      }}
-    >
+    <Box>
       <Header />
-      <Button variant="contained" color="primary" sx={{ m: 1 }}>
-        Hello MUI
-      </Button>
+
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "100vh",
+          flexDirection: "column",
+        }}
+      >
+        <Button variant="contained" color="primary" sx={{ m: 1 }}>
+          Hello MUI
+        </Button>
+      </Box>
     </Box>
   );
 };
