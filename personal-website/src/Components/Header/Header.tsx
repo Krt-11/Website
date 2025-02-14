@@ -65,7 +65,14 @@ function Header() {
   };
 
   return (
-    <AppBar position="fixed" sx={{ backgroundColor: "#374f2f" }}>
+    <AppBar
+      position="fixed"
+      sx={{
+        backgroundColor: "#374f2f",
+        display: "flex",
+        justifyContent: "space-between",
+      }}
+    >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
