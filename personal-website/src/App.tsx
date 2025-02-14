@@ -44,7 +44,6 @@ const App: React.FC = () => {
             padding: "2rem",
             backgroundColor: "black",
             color: "white",
-            border: "solid red 2px",
           }}
         >
           Contact
