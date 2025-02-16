@@ -5,6 +5,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 0;
+  position: fixed;
 }
 
 .header-toolbar {
@@ -27,4 +28,12 @@
 
 .menu-item {
   text-align: center;
+}
+
+.hidden {
+  transform: translateY(-100%);
+}
+
+.visible {
+  transform: translateY(0);
 }

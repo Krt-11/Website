@@ -17,15 +17,23 @@ const App: React.FC = () => {
           flex: 1,
           display: "flex",
           flexDirection: "column",
+          marginTop: "8rem",
         }}
       >
-        <Box id="Intro" sx={{ padding: "2rem", border: "solid 3px red" }}>
+        <Box id="intro" sx={{ padding: "2rem", border: "solid 3px red" }}>
           Intro
         </Box>
         <Box id="about" sx={{ padding: "2rem", border: "solid 3px red" }}>
           About
         </Box>
-        <Box id="resume" sx={{ padding: "2rem", border: "solid 3px red" }}>
+        <Box
+          id="resume"
+          sx={{
+            padding: "2rem",
+            border: "solid 3px red",
+            marginBottom: "2000px",
+          }}
+        >
           Resume
         </Box>
         <Box id="contact" sx={{ padding: "2rem", border: "solid 3px red" }}>

@@ -8,7 +8,7 @@ import {
   MenuItem,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import "./Header.css";
+import "./header.css";
 
 const pages = ["Intro", "About", "Resume", "Contact"];
 
