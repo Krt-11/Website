@@ -9,7 +9,6 @@ const App: React.FC = () => {
         width: "100vw",
         display: "flex",
         flexDirection: "column",
-        backgroundColor: "lightgray",
       }}
     >
       <Header />
@@ -21,28 +20,16 @@ const App: React.FC = () => {
           flexDirection: "column",
         }}
       >
-        <Box id="Intro" sx={{ padding: "2rem" }}>
+        <Box id="Intro" sx={{ padding: "2rem", border: "solid 3px red" }}>
           Intro
         </Box>
-        <Box id="about" sx={{ padding: "2rem" }}>
+        <Box id="about" sx={{ padding: "2rem", border: "solid 3px red" }}>
           About
         </Box>
-        <Box
-          id="resume"
-          sx={{
-            padding: "2rem",
-            color: "white",
-          }}
-        >
+        <Box id="resume" sx={{ padding: "2rem", border: "solid 3px red" }}>
           Resume
         </Box>
-        <Box
-          id="contact"
-          sx={{
-            padding: "2rem",
-            color: "white",
-          }}
-        >
+        <Box id="contact" sx={{ padding: "2rem", border: "solid 3px red" }}>
           Contact
         </Box>
       </Box>

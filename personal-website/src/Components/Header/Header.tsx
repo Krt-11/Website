@@ -71,6 +71,7 @@ function Header() {
         backgroundColor: "#374f2f",
         display: "flex",
         justifyContent: "space-between",
+        border: "solid 3px red",
       }}
     >
       <Container maxWidth="xl">
