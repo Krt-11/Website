@@ -14,7 +14,6 @@ const App: React.FC = () => {
       <Header />
       <Box
         sx={{
-          marginTop: "4rem",
           flex: 1,
           display: "flex",
           flexDirection: "column",
