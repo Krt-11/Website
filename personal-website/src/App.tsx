@@ -21,18 +21,16 @@ const App: React.FC = () => {
           flexDirection: "column",
         }}
       >
-        <Box
-          id="about"
-          sx={{ padding: "2rem", backgroundColor: "black", color: "white" }}
-        >
+        <Box id="Intro" sx={{ padding: "2rem" }}>
+          Intro
+        </Box>
+        <Box id="about" sx={{ padding: "2rem" }}>
           About
         </Box>
         <Box
           id="resume"
           sx={{
-            marginBottom: "2000px",
             padding: "2rem",
-            backgroundColor: "black",
             color: "white",
           }}
         >
@@ -42,7 +40,6 @@ const App: React.FC = () => {
           id="contact"
           sx={{
             padding: "2rem",
-            backgroundColor: "black",
             color: "white",
           }}
         >
