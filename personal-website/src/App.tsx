@@ -6,7 +6,6 @@ const App: React.FC = () => {
   return (
     <Box
       sx={{
-        width: "100vw",
         display: "flex",
         flexDirection: "column",
       }}
