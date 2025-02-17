@@ -25,23 +25,23 @@ const App: React.FC = () => {
           marginTop: "8rem",
         }}
       >
-        <Intro />
-        <Box id="about" sx={{ padding: "2rem", border: "solid 3px red" }}>
-          About
+        <Box id="intro" sx={{ border: "2px red dashed" }}>
+          <Intro />
         </Box>
-        <Box id="intro" sx={{ padding: "2rem", border: "solid 3px red" }}>
-          Intro
+        <Box id="about" sx={{ border: "2px red dashed" }}>
+          <About />
         </Box>
-        <About />
         <Box
           id="resume"
           sx={{
-            marginBottom: "2000px",
+            border: "2px red dashed",
           }}
         >
           <Resume />
         </Box>
-        <Contact />
+        <Box id="contact" sx={{ border: "2px red dashed" }}>
+          <Contact />
+        </Box>
       </Box>
     </Box>
   );
