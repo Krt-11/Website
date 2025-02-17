@@ -41,6 +41,7 @@ function Header() {
 
   return (
     <Box
+      id="header"
       sx={{
         width: "100%",
         backgroundColor: "#374f2f",

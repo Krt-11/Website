@@ -7,6 +7,7 @@ import Intro from "./Components/Intro/Intro";
 import About from "./Components/About/About";
 import Resume from "./Components/Resume/Resume";
 import Footer from "./Components/Footer/Footer";
+import BackToTop from "./Components/BackToTop/BackToTop";
 
 const App: React.FC = () => {
   return (
@@ -19,11 +20,12 @@ const App: React.FC = () => {
     >
       <Header />
       <Box
+        id="body"
         sx={{
           flex: 1,
           display: "flex",
           flexDirection: "column",
-          marginTop: "8rem",
+          paddingTop: "8rem",
         }}
       >
         <Box id="intro" sx={{ border: "2px red dashed" }}>
@@ -45,6 +47,7 @@ const App: React.FC = () => {
           <Contact />
         </Box>
         <Footer />
+        <BackToTop />
       </Box>
     </Box>
   );
