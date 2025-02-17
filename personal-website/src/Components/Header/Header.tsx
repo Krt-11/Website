@@ -68,7 +68,7 @@ function Header() {
             fontFamily: "monospace",
 
             fontWeight: 900,
-            fontSize: "2.5rem",
+            fontSize: "2.2rem",
             letterSpacing: "0.1rem",
             color: "white",
             textDecoration: "none",
