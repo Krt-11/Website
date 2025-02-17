@@ -9,6 +9,7 @@ const App: React.FC = () => {
       sx={{
         display: "flex",
         flexDirection: "column",
+        backgroundColor: "#DCDCDC",
       }}
     >
       <Header />
