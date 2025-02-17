@@ -2,4 +2,5 @@ body {
   margin: 0;
   scroll-behavior: smooth;
   overflow-y: auto;
+  background-color: gainsboro;
 }
