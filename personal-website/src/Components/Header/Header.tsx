@@ -74,7 +74,6 @@ function Header() {
             textDecoration: "none",
           }}
         >
-
           {`<Krutin Shukla/>`}
         </Typography>
 
@@ -88,9 +87,7 @@ function Header() {
             aria-label="navigation menu"
             aria-controls="menu-appbar"
             aria-haspopup="true"
-
             onClick={handleOpenNavMenu}
-
             sx={{ color: "white" }}
           >
             <MenuIcon />
@@ -110,7 +107,6 @@ function Header() {
                 key={page}
                 onClick={() => handleMenuClick(page.toLowerCase())}
               >
-
                 <Typography
                   sx={{
                     textAlign: "center",
@@ -118,7 +114,6 @@ function Header() {
                 >
                   {page}
                 </Typography>
-
               </MenuItem>
             ))}
           </Menu>
