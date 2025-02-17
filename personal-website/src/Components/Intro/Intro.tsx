@@ -14,7 +14,7 @@ function Intro() {
           marginBottom: "20px",
         }}
       >
-        Intro
+        Hi I'm Krutin
       </Typography>
     </Box>
   );

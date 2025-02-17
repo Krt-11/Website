@@ -6,6 +6,7 @@ import Contact from "./Components/Contact/Contact";
 import Intro from "./Components/Intro/Intro";
 import About from "./Components/About/About";
 import Resume from "./Components/Resume/Resume";
+import Footer from "./Components/Footer/Footer";
 
 const App: React.FC = () => {
   return (
@@ -43,6 +44,7 @@ const App: React.FC = () => {
         <Box id="contact" sx={{ border: "2px red dashed" }}>
           <Contact />
         </Box>
+        <Footer />
       </Box>
     </Box>
   );
