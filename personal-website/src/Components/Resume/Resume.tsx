@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 
-function About() {
+function Resume() {
   return (
     <Box sx={{ padding: "2rem" }}>
       <Typography
@@ -14,10 +14,10 @@ function About() {
           marginBottom: "20px",
         }}
       >
-        About
+        Resume
       </Typography>
     </Box>
   );
 }
 
-export default About;
+export default Resume;
