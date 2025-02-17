@@ -66,6 +66,7 @@ function Header() {
           variant="h6"
           sx={{
             fontFamily: "monospace",
+
             fontWeight: 900,
             fontSize: "2.5rem",
             letterSpacing: "0.1rem",
@@ -73,16 +74,23 @@ function Header() {
             textDecoration: "none",
           }}
         >
+
           {`<Krutin Shukla/>`}
         </Typography>
 
-        <Box>
+        <Box
+          onMouseEnter={handleOpenNavMenu}
+          onMouseLeave={handleCloseNavMenu}
+          sx={{ display: "flex", position: "relative" }}
+        >
           <IconButton
             size="large"
             aria-label="navigation menu"
             aria-controls="menu-appbar"
             aria-haspopup="true"
+
             onClick={handleOpenNavMenu}
+
             sx={{ color: "white" }}
           >
             <MenuIcon />
@@ -95,12 +103,14 @@ function Header() {
             transformOrigin={{ vertical: "top", horizontal: "right" }}
             open={Boolean(anchorElNav)}
             onClose={handleCloseNavMenu}
+            disableScrollLock
           >
             {pages.map((page) => (
               <MenuItem
                 key={page}
                 onClick={() => handleMenuClick(page.toLowerCase())}
               >
+
                 <Typography
                   sx={{
                     textAlign: "center",
@@ -108,6 +118,7 @@ function Header() {
                 >
                   {page}
                 </Typography>
+
               </MenuItem>
             ))}
           </Menu>
