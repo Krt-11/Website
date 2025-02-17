@@ -1,6 +1,23 @@
-/*
-bullet points of main themes
-write it crap
-wait 24 horus and take a second look
-stagger the progress so you can have a second look on everything
-*/
+import { Box, Typography } from "@mui/material";
+
+function About() {
+  return (
+    <Box sx={{ padding: "2rem" }}>
+      <Typography
+        component="h2"
+        sx={{
+          fontFamily: "monospace",
+          fontWeight: 700,
+          fontSize: "2rem",
+          color: "black",
+          textDecoration: "none",
+          marginBottom: "20px",
+        }}
+      >
+        About
+      </Typography>
+    </Box>
+  );
+}
+
+export default About;
