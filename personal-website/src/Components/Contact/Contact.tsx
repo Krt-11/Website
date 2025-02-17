@@ -61,9 +61,12 @@ function Contact() {
                 alignItems: "center",
                 justifyContent: "center",
                 borderRadius: "10px",
-                transition: "transform 1s ease-in-out",
+                transition: "transform 0.3s ease-in-out",
                 "&:hover .MuiSvgIcon-root": {
                   transform: "translateY(-5px)",
+                },
+                "& .MuiSvgIcon-root": {
+                  transition: "transform 0.3s ease-in-out",
                 },
                 "&:active": {
                   transform: "scale(0.95)",

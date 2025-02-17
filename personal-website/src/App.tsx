@@ -35,6 +35,7 @@ const App: React.FC = () => {
           id="resume"
           sx={{
             border: "2px red dashed",
+            marginBottom: "1000px",
           }}
         >
           <Resume />
