@@ -2,6 +2,7 @@ import React from "react";
 import { Box } from "@mui/material";
 import Header from "./Components/Header/Header";
 import Contact from "./Components/Contact/Contact";
+import About from "./Components/About/About";
 import Resume from "./Components/Resume/Resume";
 
 const App: React.FC = () => {
@@ -25,9 +26,7 @@ const App: React.FC = () => {
         <Box id="intro" sx={{ padding: "2rem", border: "solid 3px red" }}>
           Intro
         </Box>
-        <Box id="about" sx={{ padding: "2rem", border: "solid 3px red" }}>
-          About
-        </Box>
+        <About />
         <Box
           id="resume"
           sx={{
