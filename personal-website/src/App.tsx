@@ -3,6 +3,7 @@ import { Box } from "@mui/material";
 import Header from "./Components/Header/Header";
 import Contact from "./Components/Contact/Contact";
 import About from "./Components/About/About";
+import Resume from "./Components/Resume/Resume";
 
 const App: React.FC = () => {
   return (
@@ -29,12 +30,10 @@ const App: React.FC = () => {
         <Box
           id="resume"
           sx={{
-            padding: "2rem",
-            border: "solid 3px red",
             marginBottom: "2000px",
           }}
         >
-          Resume
+          <Resume />
         </Box>
         <Contact />
       </Box>
