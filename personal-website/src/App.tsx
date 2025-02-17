@@ -1,20 +1,44 @@
 import React from "react";
-import { Box, Button } from "@mui/material";
+import { Box } from "@mui/material";
 import Header from "./Components/Header/Header";
+import Contact from "./Components/Contact/Contact";
 
 const App: React.FC = () => {
   return (
     <Box
-      style={{ padding: "20px" }}
       sx={{
-        alignItems: "center",
-        border: "1px solid red",
+        display: "flex",
+        flexDirection: "column",
+        backgroundColor: "#DCDCDC",
       }}
     >
       <Header />
-      <Button variant="contained" color="primary" sx={{ m: 1 }}>
-        Hello MUI
-      </Button>
+      <Box
+        sx={{
+          flex: 1,
+          display: "flex",
+          flexDirection: "column",
+          marginTop: "8rem",
+        }}
+      >
+        <Box id="intro" sx={{ padding: "2rem", border: "solid 3px red" }}>
+          Intro
+        </Box>
+        <Box id="about" sx={{ padding: "2rem", border: "solid 3px red" }}>
+          About
+        </Box>
+        <Box
+          id="resume"
+          sx={{
+            padding: "2rem",
+            border: "solid 3px red",
+            marginBottom: "2000px",
+          }}
+        >
+          Resume
+        </Box>
+        <Contact />
+      </Box>
     </Box>
   );
 };
