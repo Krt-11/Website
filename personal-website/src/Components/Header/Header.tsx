@@ -8,7 +8,6 @@ import {
   MenuItem,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import "./header.css";
 import { smoothScrollTo } from "../../SharedFunctions/ScrollAnimation";
 
 const pages = ["Intro", "About", "Resume", "Contact"];
@@ -67,13 +66,16 @@ function Header() {
           variant="h6"
           sx={{
             fontFamily: "monospace",
-            fontWeight: 700,
+
+            fontWeight: 900,
+            fontSize: "2.5rem",
             letterSpacing: "0.1rem",
             color: "white",
             textDecoration: "none",
           }}
         >
-          Krutin Shukla
+
+          {`<Krutin Shukla/>`}
         </Typography>
 
         <Box
@@ -86,6 +88,9 @@ function Header() {
             aria-label="navigation menu"
             aria-controls="menu-appbar"
             aria-haspopup="true"
+
+            onClick={handleOpenNavMenu}
+
             sx={{ color: "white" }}
           >
             <MenuIcon />
@@ -105,7 +110,15 @@ function Header() {
                 key={page}
                 onClick={() => handleMenuClick(page.toLowerCase())}
               >
-                <Typography sx={{ textAlign: "center" }}>{page}</Typography>
+
+                <Typography
+                  sx={{
+                    textAlign: "center",
+                  }}
+                >
+                  {page}
+                </Typography>
+
               </MenuItem>
             ))}
           </Menu>
