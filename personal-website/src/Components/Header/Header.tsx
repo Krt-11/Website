@@ -41,20 +41,52 @@ function Header() {
   };
 
   return (
-    <Box className="header-container">
-      <Toolbar className="header-toolbar">
-        <Typography variant="h6" className="header-title">
+    <Box
+      sx={{
+        width: "100%",
+        backgroundColor: "#374f2f",
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+        padding: 0,
+        position: "fixed",
+        top: 0,
+        left: 0,
+        transition: "transform 0.3s ease-in-out",
+        zIndex: 1000,
+      }}
+    >
+      <Toolbar
+        sx={{
+          width: "100%",
+          display: "flex",
+          justifyContent: "space-between",
+        }}
+      >
+        <Typography
+          variant="h6"
+          sx={{
+            fontFamily: "monospace",
+            fontWeight: 700,
+            letterSpacing: "0.1rem",
+            color: "white",
+            textDecoration: "none",
+          }}
+        >
           Krutin Shukla
         </Typography>
 
-        <Box>
+        <Box
+          onMouseEnter={handleOpenNavMenu}
+          onMouseLeave={handleCloseNavMenu}
+          sx={{ display: "flex", position: "relative" }}
+        >
           <IconButton
             size="large"
             aria-label="navigation menu"
             aria-controls="menu-appbar"
             aria-haspopup="true"
-            onClick={handleOpenNavMenu}
-            className="menu-icon"
+            sx={{ color: "white" }}
           >
             <MenuIcon />
           </IconButton>
@@ -66,13 +98,14 @@ function Header() {
             transformOrigin={{ vertical: "top", horizontal: "right" }}
             open={Boolean(anchorElNav)}
             onClose={handleCloseNavMenu}
+            disableScrollLock
           >
             {pages.map((page) => (
               <MenuItem
                 key={page}
                 onClick={() => handleMenuClick(page.toLowerCase())}
               >
-                <Typography className="menu-item">{page}</Typography>
+                <Typography sx={{ textAlign: "center" }}>{page}</Typography>
               </MenuItem>
             ))}
           </Menu>
