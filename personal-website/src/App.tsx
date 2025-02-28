@@ -6,6 +6,8 @@ import Contact from "./Components/Contact/Contact";
 import Intro from "./Components/Intro/Intro";
 import About from "./Components/About/About";
 import Resume from "./Components/Resume/Resume";
+import Footer from "./Components/Footer/Footer";
+import BackToTop from "./Components/BackToTop/BackToTop";
 
 const App: React.FC = () => {
   return (
@@ -18,11 +20,12 @@ const App: React.FC = () => {
     >
       <Header />
       <Box
+        id="body"
         sx={{
           flex: 1,
           display: "flex",
           flexDirection: "column",
-          marginTop: "8rem",
+          paddingTop: "8rem",
         }}
       >
         <Box id="intro" sx={{ border: "2px red dashed" }}>
@@ -35,6 +38,7 @@ const App: React.FC = () => {
           id="resume"
           sx={{
             border: "2px red dashed",
+            marginBottom: "1000px",
           }}
         >
           <Resume />
@@ -42,6 +46,8 @@ const App: React.FC = () => {
         <Box id="contact" sx={{ border: "2px red dashed" }}>
           <Contact />
         </Box>
+        <Footer />
+        <BackToTop />
       </Box>
     </Box>
   );

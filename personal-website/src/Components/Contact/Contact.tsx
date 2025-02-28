@@ -1,5 +1,10 @@
 import { Box, Typography } from "@mui/material";
-import { GitHub, LinkedIn, Email } from "@mui/icons-material";
+import {
+  GitHub,
+  LinkedIn,
+  Email,
+  KeyboardDoubleArrowDown,
+} from "@mui/icons-material";
 
 const contacts = [
   {
@@ -36,6 +41,18 @@ function Contact() {
         Contact
       </Typography>
 
+      <Typography
+        component="h4"
+        sx={{
+          paddingBottom: "1rem",
+          color: "#s1a2617",
+          fontFamily: "monospace",
+          display: "flex",
+        }}
+      >
+        LET'S GET IN TOUCH <KeyboardDoubleArrowDown />
+      </Typography>
+
       <Box
         sx={{
           display: "flex",
@@ -61,9 +78,12 @@ function Contact() {
                 alignItems: "center",
                 justifyContent: "center",
                 borderRadius: "10px",
-                transition: "transform 1s ease-in-out",
+                transition: "transform 0.3s ease-in-out",
                 "&:hover .MuiSvgIcon-root": {
                   transform: "translateY(-5px)",
+                },
+                "& .MuiSvgIcon-root": {
+                  transition: "transform 0.3s ease-in-out",
                 },
                 "&:active": {
                   transform: "scale(0.95)",
