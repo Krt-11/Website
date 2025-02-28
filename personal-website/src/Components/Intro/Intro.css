@@ -1,6 +1,7 @@
 .typing-container {
   position: relative;
-  display: inline-block;
+  display: flex;
+  flex-direction: row;
   padding: 2rem;
 }
 
@@ -8,7 +9,7 @@
   position: absolute;
   bottom: 32px;
   left: 5px;
-  width: 100%;
+  width: 20%;
   height: 45px;
   background-color: #1a2617;
 }
@@ -25,22 +26,35 @@
   align-items: center;
 }
 
-.typing-cursor {
-  width: 6px;
-  height: 24px;
-  background-color: white;
-  margin-left: 5px;
-  animation: blink 1s infinite;
+.intro-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2rem;
 }
 
-@keyframes blink {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+.typing {
+  background-color: #1a2617;
+  height: fit-content;
+  padding: 1rem;
+  color: gainsboro;
+}
+
+.bullet-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.bullet-list li {
+  position: relative;
+  padding-left: 20px;
+}
+
+.bullet-list li::before {
+  content: ">";
+  color: #1a2617;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
