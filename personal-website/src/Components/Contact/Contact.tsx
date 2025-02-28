@@ -1,5 +1,10 @@
 import { Box, Typography } from "@mui/material";
-import { GitHub, LinkedIn, Email } from "@mui/icons-material";
+import {
+  GitHub,
+  LinkedIn,
+  Email,
+  KeyboardDoubleArrowDown,
+} from "@mui/icons-material";
 
 const contacts = [
   {
@@ -34,6 +39,18 @@ function Contact() {
         }}
       >
         Contact
+      </Typography>
+
+      <Typography
+        component="h4"
+        sx={{
+          paddingBottom: "1rem",
+          color: "#s1a2617",
+          fontFamily: "monospace",
+          display: "flex",
+        }}
+      >
+        LET'S GET IN TOUCH <KeyboardDoubleArrowDown />
       </Typography>
 
       <Box
