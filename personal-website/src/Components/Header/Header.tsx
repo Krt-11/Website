@@ -26,16 +26,13 @@ function Header() {
   const handleMenuClick = (sectionId: string) => {
     setTimeout(() => {
       const section = document.getElementById(sectionId);
-
       if (section) {
         const yOffset = -64;
         const targetY =
           section.getBoundingClientRect().top + window.scrollY + yOffset;
-
         smoothScrollTo(targetY);
       }
     }, 100);
-
     setAnchorElNav(null);
   };
 
@@ -67,7 +64,6 @@ function Header() {
           variant="h6"
           sx={{
             fontFamily: "monospace",
-
             fontWeight: 900,
             fontSize: "2.2rem",
             letterSpacing: "0.1rem",
@@ -88,7 +84,6 @@ function Header() {
             aria-label="navigation menu"
             aria-controls="menu-appbar"
             aria-haspopup="true"
-            onClick={handleOpenNavMenu}
             sx={{ color: "white" }}
           >
             <MenuIcon />
@@ -108,13 +103,7 @@ function Header() {
                 key={page}
                 onClick={() => handleMenuClick(page.toLowerCase())}
               >
-                <Typography
-                  sx={{
-                    textAlign: "center",
-                  }}
-                >
-                  {page}
-                </Typography>
+                <Typography sx={{ textAlign: "center" }}>{page}</Typography>
               </MenuItem>
             ))}
           </Menu>
