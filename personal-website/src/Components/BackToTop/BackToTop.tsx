@@ -4,7 +4,7 @@ import { smoothScrollTo } from "../../SharedFunctions/ScrollAnimation";
 import "./BackToTop.css";
 
 export default function BackToTop() {
-  const SCROLL_HEIGHT = 300;
+  const SCROLL_HEIGHT = 200;
   const [showButton, setShowButton] = useState(false);
 
   useEffect(() => {
@@ -30,7 +30,7 @@ export default function BackToTop() {
         showButton ? "BackToTop-Visible" : "BackToTop-Invisible"
       }`}
     >
-      <ArrowUpwardIcon className="BackToTop-Icon" />
+      <ArrowUpwardIcon className="BackToTop-Icon" fontSize="large" />
     </button>
   );
 }

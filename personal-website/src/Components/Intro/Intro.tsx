@@ -1,17 +1,31 @@
 import { Box, Typography } from "@mui/material";
-// import Typical from "react-typical";
 import "./Intro.css";
+import { smoothScrollTo } from "../../SharedFunctions/ScrollAnimation";
 
 function Intro() {
+  const handleScrollToAbout = () => {
+    const aboutSection = document.getElementById("about");
+    if (aboutSection) {
+      const yOffset = -64;
+      smoothScrollTo(aboutSection.offsetTop + yOffset);
+    }
+  };
+
   return (
     <Box className="intro-box">
       <Box className="typing">
         <Typography
           variant="h4"
-          sx={{ fontFamily: "monospace", fontWeight: "600" }}
+          sx={{
+            fontFamily: "monospace",
+            fontWeight: "600",
+            position: "relative",
+            zIndex: "1",
+          }}
         >
           Hi, I'm Krutin
         </Typography>
+        <Box className="typingColorBox" />
       </Box>
       <Box className="bullet-points">
         <Typography variant="h6">
@@ -19,24 +33,12 @@ function Intro() {
             <li>I'm a software engineer</li>
             <li>I do full stack development</li>
             <li>I also do mobile development</li>
-            <li>Check out some of my work</li>
+            <li className="clickable" onClick={handleScrollToAbout}>
+              Check out some of my work
+            </li>
           </ul>
         </Typography>
       </Box>
-
-      {/*       
-      <Box className="typing-container">
-        <Box className="typing-background" />
-
-        <Typography component="h2" className="typing-text">
-          <Typical
-            steps={["Hi I'm Krutin", 1500, "", 1000]}
-            loop={Infinity}
-            wrapper="span"
-          />
-        </Typography>
-        <Box className="bullet-points"></Box>
-      </Box> */}
     </Box>
   );
 }
