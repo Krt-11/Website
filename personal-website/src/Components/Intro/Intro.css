@@ -13,13 +13,13 @@
 }
 
 .typingColorBox {
-  background-color: #c57620;
+  background-color: #eca559;
   height: 3rem;
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  top: 45%;
+  top: 50%;
   mix-blend-mode: multiply;
   opacity: 0.85;
 }
@@ -30,6 +30,8 @@
   font-family: monospace;
   font-weight: 550;
   text-decoration: underline;
+  padding-top: 5rem;
+  font-size: 1rem;
 }
 
 .bullet-list li {
