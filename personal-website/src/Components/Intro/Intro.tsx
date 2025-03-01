@@ -12,7 +12,7 @@ function Intro() {
     setTimeout(() => {
       const aboutSection = document.getElementById("about");
       if (aboutSection) {
-        const yOffset = -80;
+        const yOffset = -64;
         const targetY =
           aboutSection.getBoundingClientRect().top + window.scrollY + yOffset;
         smoothScrollTo(targetY);
@@ -29,9 +29,9 @@ function Intro() {
       <Box className="typing">
         <Typography
           variant="h4"
-          sx={{ fontFamily: "monospace", fontWeight: "600" }}
+          sx={{ fontFamily: "monospace", fontWeight: "600", zIndex: "1" }}
         >
-          Hi, I'm Krutin
+          Hi, I'm Krutin!
         </Typography>
         <Box className="typingColorBox" />
       </Box>
