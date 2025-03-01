@@ -26,7 +26,8 @@
   list-style-type: none;
   padding-left: 0;
   font-family: monospace;
-  font-weight: 600;
+  font-weight: 550;
+  text-decoration: underline;
 }
 
 .bullet-list li {
@@ -49,4 +50,41 @@
 
 .bullet-list li.clickable {
   cursor: pointer;
+}
+
+.scroll-arrow {
+  position: fixed;
+  top: 25%;
+  left: 5%;
+  transform: translate(-50%, -50%);
+  font-size: 5rem;
+  font-weight: bold;
+  opacity: 0;
+  animation: fadeMoveDown 1.2s ease-in-out forwards;
+  z-index: 1000;
+}
+
+@keyframes fadeMoveDown {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) translateY(-20px);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) translateY(10px);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) translateY(30px);
+  }
+}
+
+.work-link {
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.work-link:hover {
+  transform: translateY(-3px);
+  text-decoration: underline;
 }
