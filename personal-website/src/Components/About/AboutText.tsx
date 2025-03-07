@@ -1,8 +1,8 @@
 const aboutText = (
   <>
-    Hi there! I'm Krutin—a recent graduate from The Ohio State University with a
-    Bachelor's in Computer Science, specializing in software development. I'm a
-    full-stack software engineer with a passion for solving complex technical
+    Hi there! I'm Krutin — a recent graduate from The Ohio State University with
+    a Bachelor's in Computer Science, specializing in software development. I'm
+    a full-stack software engineer with a passion for solving complex technical
     problems.
     <br />
     <br />
