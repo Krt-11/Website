@@ -8,17 +8,17 @@ import {
 
 const contacts = [
   {
-    icon: <GitHub sx={{ fontSize: "3rem", color: "white" }} />,
+    icon: <GitHub sx={{ fontSize: "5rem", color: "white" }} />,
     link: "https://github.com/Krt-11",
     label: "GitHub",
   },
   {
-    icon: <LinkedIn sx={{ fontSize: "3rem", color: "white" }} />,
+    icon: <LinkedIn sx={{ fontSize: "5rem", color: "white" }} />,
     link: "https://www.linkedin.com/in/krutin-shukla/",
     label: "LinkedIn",
   },
   {
-    icon: <Email sx={{ fontSize: "3rem", color: "white" }} />,
+    icon: <Email sx={{ fontSize: "5rem", color: "white" }} />,
     link: "mailto:krutinrs@gmail.com",
     label: "Email",
   },
@@ -28,24 +28,23 @@ function Contact() {
   return (
     <Box sx={{ padding: "2rem" }}>
       <Typography
-        component="h2"
+        variant="h3"
         sx={{
           fontFamily: "monospace",
           fontWeight: 700,
-          fontSize: "2rem",
           color: "black",
           textDecoration: "none",
           marginBottom: "20px",
         }}
       >
-        Contact
+        Contact.
       </Typography>
 
       <Typography
         component="h4"
         sx={{
           paddingBottom: "1rem",
-          color: "#s1a2617",
+          color: "#1a2617",
           fontFamily: "monospace",
           display: "flex",
         }}
@@ -58,6 +57,11 @@ function Contact() {
           display: "flex",
           justifyContent: "flex-start",
           gap: "4rem",
+          flexWrap: "wrap",
+          "@media (max-width: 100px)": {
+            flexDirection: "column",
+            alignItems: "left",
+          },
         }}
       >
         {contacts.map((contact, index) => (
@@ -71,14 +75,19 @@ function Contact() {
           >
             <Box
               sx={{
-                width: "210px",
-                height: "120px",
+                width: "315px",
+                height: "180px",
                 backgroundColor: "#374f2f",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
                 borderRadius: "10px",
-                transition: "transform 0.3s ease-in-out",
+                transition: "all 0.3s ease-in-out",
+                boxShadow: "5px 5px 0px gray",
+                "&:hover": {
+                  boxShadow: "7px 7px 0px rgb(159, 159, 159)",
+                  transform: "translateY(-4px)",
+                },
                 "&:hover .MuiSvgIcon-root": {
                   transform: "translateY(-5px)",
                 },

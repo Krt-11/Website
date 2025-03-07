@@ -2,5 +2,5 @@ body {
   margin: 0;
   scroll-behavior: smooth;
   overflow-y: auto;
-  background-color: gainsboro;
+  background-color: rgb(250, 250, 250);
 }

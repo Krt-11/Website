@@ -1,20 +1,47 @@
 import { Box, Typography } from "@mui/material";
-import Typical from "react-typical";
+import { smoothScrollTo } from "../../SharedFunctions/ScrollAnimation";
 import "./Intro.css";
+import KeyboardDoubleArrowDownIcon from "@mui/icons-material/KeyboardDoubleArrowDown";
 
 function Intro() {
-  return (
-    <Box className="typing-container">
-      <Box className="typing-background" />
+  const handleScrollToAbout = () => {
+    const aboutSection = document.getElementById("about");
+    if (aboutSection) {
+      const yOffset = -64;
+      const targetY =
+        aboutSection.getBoundingClientRect().top + window.scrollY + yOffset;
+      smoothScrollTo(targetY);
+    }
+  };
 
-      <Typography component="h2" className="typing-text">
-        <Typical
-          steps={["Hi I'm Krutin", 1500, "", 1000]}
-          loop={Infinity}
-          wrapper="span"
-        />
-        <Box className="typing-cursor" />
-      </Typography>
+  return (
+    <Box className="intro-box">
+      <Box className="typing">
+        <Typography
+          variant="h3"
+          sx={{ fontFamily: "monospace", fontWeight: "600", zIndex: "1" }}
+        >
+          Hi, I'm Krutin!
+        </Typography>
+        <Box className="typingColorBox" />
+      </Box>
+
+      <Box className="bullet-points">
+        <Typography variant="h6">
+          <ul className="bullet-list">
+            <li>I'm a software engineer</li>
+            <li>I do full stack development</li>
+            <li>I also do mobile development</li>
+            <li className="work-link" onClick={handleScrollToAbout}>
+              Check out some of my work
+              <KeyboardDoubleArrowDownIcon
+                className="bouncing-arrow"
+                sx={{ color: "#374f2f" }}
+              />
+            </li>
+          </ul>
+        </Typography>
+      </Box>
     </Box>
   );
 }

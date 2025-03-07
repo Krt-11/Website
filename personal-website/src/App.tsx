@@ -25,7 +25,7 @@ const App: React.FC = () => {
           flex: 1,
           display: "flex",
           flexDirection: "column",
-          paddingTop: "8rem",
+          padding: "8rem 10% 0 10%",
         }}
       >
         <Box id="intro" sx={{ border: "2px red dashed" }}>
@@ -46,9 +46,10 @@ const App: React.FC = () => {
         <Box id="contact" sx={{ border: "2px red dashed" }}>
           <Contact />
         </Box>
-        <Footer />
+
         <BackToTop />
       </Box>
+      <Footer />
     </Box>
   );
 };
