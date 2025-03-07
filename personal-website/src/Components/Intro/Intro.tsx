@@ -18,7 +18,7 @@ function Intro() {
     <Box className="intro-box">
       <Box className="typing">
         <Typography
-          variant="h4"
+          variant="h3"
           sx={{ fontFamily: "monospace", fontWeight: "600", zIndex: "1" }}
         >
           Hi, I'm Krutin!

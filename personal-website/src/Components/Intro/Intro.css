@@ -14,12 +14,12 @@
 
 .typingColorBox {
   background-color: #eca559;
-  height: 3rem;
+  height: 2.5rem;
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  top: 55%;
+  top: 50%;
   mix-blend-mode: multiply;
   opacity: 0.85;
 }
@@ -31,7 +31,7 @@
   font-weight: 550;
   text-decoration: underline;
   padding-top: 5rem;
-  font-size: 1rem;
+  font-size: 1.25rem;
 }
 
 .bullet-list li {

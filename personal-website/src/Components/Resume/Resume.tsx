@@ -4,17 +4,16 @@ function Resume() {
   return (
     <Box sx={{ padding: "2rem" }}>
       <Typography
-        component="h2"
+        variant="h3"
         sx={{
           fontFamily: "monospace",
           fontWeight: 700,
-          fontSize: "2rem",
           color: "black",
           textDecoration: "none",
           marginBottom: "20px",
         }}
       >
-        Resume
+        Resume.
       </Typography>
     </Box>
   );
