@@ -34,7 +34,7 @@
 }
 
 .BackToTop-Icon {
-  color: white;
+  color: rgba(255, 166, 0, 0.811);
   transition: transform 0.3s ease-in-out;
 }
 
