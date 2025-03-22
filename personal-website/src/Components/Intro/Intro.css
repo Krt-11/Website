@@ -5,6 +5,17 @@
   padding: 2rem;
 }
 
+@media screen and (max-width: 768px) {
+  .intro-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bullet-points {
+    margin-top: 2rem;
+  }
+}
+
 .typing {
   height: fit-content;
   padding: 1rem;
@@ -32,6 +43,7 @@
   text-decoration: underline;
   padding-top: 5rem;
   font-size: 1.25rem;
+  padding-left: 3rem;
 }
 
 .bullet-list li {
@@ -53,17 +65,16 @@
   color: #c57620;
 }
 
-.bullet-list li.clickable {
+.work-link {
   cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
 }
 
-.scroll-arrow {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 5rem;
-  font-weight: bold;
-  z-index: 1000;
+.work-link:hover {
+  transform: translateY(-3px);
+  text-decoration: underline;
 }
 
 .bouncing-arrow {
@@ -78,16 +89,4 @@
   50% {
     transform: translateY(0);
   }
-}
-
-.work-link {
-  cursor: pointer;
-  transition: transform 0.2s ease-in-out;
-  display: flex;
-  align-items: center;
-}
-
-.work-link:hover {
-  transform: translateY(-3px);
-  text-decoration: underline;
 }

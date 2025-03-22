@@ -1,4 +1,4 @@
-import { Box, Typography, Tooltip } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import aboutText from "./AboutText";
 
 function About() {
@@ -33,7 +33,6 @@ function About() {
           fontFamily: "monospace",
           fontWeight: 700,
           color: "black",
-          textDecoration: "none",
           marginBottom: "20px",
         }}
       >
@@ -53,9 +52,7 @@ function About() {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          justifyContent: "center",
           textAlign: "center",
-          p: 1,
         }}
       >
         <Typography
@@ -82,7 +79,7 @@ function About() {
         <Box
           sx={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(120px, 1fr))",
+            gridTemplateColumns: "repeat(auto-fit, minmax(5rem, 1fr))",
             gap: "3vh",
             width: "90%",
             maxWidth: "1200px",
@@ -90,56 +87,31 @@ function About() {
             border: "2px solid black",
             boxShadow: "0.5rem 0.5rem 0 orange",
             marginTop: "2rem",
+            justifyContent: "center",
+            alignItems: "center",
           }}
         >
-          {techLogos.map((logo) => {
+          {techLogos.map((logo, index) => {
             const techName = logo
               .replace(/\.(png|svg|jpg)$/, "")
               .replace("-", " ");
 
             return (
-              <Tooltip
-                title={techName}
-                arrow
-                PopperProps={{
-                  modifiers: [
-                    {
-                      name: "preventOverflow",
-                      options: {
-                        boundary: "window",
-                      },
-                    },
-                  ],
-                }}
-                componentsProps={{
-                  tooltip: {
-                    sx: {
-                      fontSize: "1.2rem", // Adjusted font size
-                      padding: "0.5rem", // More spacing for readability
-                      backgroundColor: "rgba(0, 0, 0, 0.85)", // Optional: Better contrast
-                    },
+              <Box
+                key={index}
+                component="img"
+                src={`/${logo}`}
+                alt={techName}
+                sx={{
+                  width: "100px",
+                  height: "100px",
+                  objectFit: "contain",
+                  transition: "transform 0.2s",
+                  "&:hover": {
+                    transform: "scale(1.1)",
                   },
                 }}
-              >
-                <Box
-                  component="img"
-                  src={`/${logo}`}
-                  alt={techName}
-                  sx={{
-                    width: "10vw",
-                    height: "10vw",
-                    minWidth: "100px",
-                    minHeight: "100px",
-                    maxWidth: "140px",
-                    maxHeight: "140px",
-                    objectFit: "contain",
-                    transition: "transform 0.2s",
-                    "&:hover": {
-                      transform: "scale(1.1)",
-                    },
-                  }}
-                />
-              </Tooltip>
+              />
             );
           })}
         </Box>
