@@ -8,17 +8,17 @@ import {
 
 const contacts = [
   {
-    icon: <GitHub sx={{ fontSize: "5rem", color: "white" }} />,
+    icon: <GitHub sx={{ fontSize: "4rem", color: "white" }} />,
     link: "https://github.com/Krt-11",
     label: "GitHub",
   },
   {
-    icon: <LinkedIn sx={{ fontSize: "5rem", color: "white" }} />,
+    icon: <LinkedIn sx={{ fontSize: "4rem", color: "white" }} />,
     link: "https://www.linkedin.com/in/krutin-shukla/",
     label: "LinkedIn",
   },
   {
-    icon: <Email sx={{ fontSize: "5rem", color: "white" }} />,
+    icon: <Email sx={{ fontSize: "4rem", color: "white" }} />,
     link: "mailto:krutinrs@gmail.com",
     label: "Email",
   },
@@ -56,7 +56,7 @@ function Contact() {
         sx={{
           display: "flex",
           justifyContent: "flex-start",
-          gap: "4rem",
+          gap: "2rem",
           flexWrap: "wrap",
           "@media (max-width: 100px)": {
             flexDirection: "column",
@@ -75,8 +75,8 @@ function Contact() {
           >
             <Box
               sx={{
-                width: "315px",
-                height: "180px",
+                width: "12rem",
+                height: "8rem",
                 backgroundColor: "#374f2f",
                 display: "flex",
                 alignItems: "center",

@@ -33,7 +33,7 @@ function Intro() {
             <li>I do full stack development</li>
             <li>I also do mobile development</li>
             <li className="work-link" onClick={handleScrollToAbout}>
-              Check out some of my work
+              Check out my work
               <KeyboardDoubleArrowDownIcon
                 className="bouncing-arrow"
                 sx={{ color: "#374f2f" }}
