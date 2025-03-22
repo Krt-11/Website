@@ -5,6 +5,7 @@ import {
   Email,
   KeyboardDoubleArrowDown,
 } from "@mui/icons-material";
+import { useEffect, useRef, useState } from "react";
 
 const contacts = [
   {
@@ -25,16 +26,50 @@ const contacts = [
 ];
 
 function Contact() {
+  const [titleVisible, setTitleVisible] = useState(false);
+  const titleRef = useRef<HTMLHeadingElement | null>(null);
+
+  useEffect(() => {
+    const titleElement = titleRef.current;
+
+    if (!titleElement) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setTitleVisible(true);
+        }
+      },
+      {
+        threshold: 0.1,
+      }
+    );
+
+    observer.observe(titleElement);
+
+    return () => {
+      observer.unobserve(titleElement);
+    };
+  }, []);
+
+  const fadeInStyle = {
+    opacity: titleVisible ? 1 : 0,
+    transform: titleVisible ? "translateY(0)" : "translateY(30px)",
+    transition: "opacity 1s ease, transform 1s ease",
+  };
+
   return (
     <Box sx={{ padding: "2rem" }}>
       <Typography
         variant="h3"
+        ref={titleRef}
         sx={{
           fontFamily: "monospace",
           fontWeight: 700,
           color: "black",
           textDecoration: "none",
           marginBottom: "20px",
+          ...fadeInStyle,
         }}
       >
         Contact.
@@ -47,6 +82,7 @@ function Contact() {
           color: "#1a2617",
           fontFamily: "monospace",
           display: "flex",
+          alignItems: "center",
         }}
       >
         LET'S GET IN TOUCH <KeyboardDoubleArrowDown />

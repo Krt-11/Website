@@ -1,8 +1,27 @@
 import { Box, Typography, Link } from "@mui/material";
+import { useEffect, useState } from "react";
 
 function Resume() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const section = document.getElementById("resume-section");
+      if (section) {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= window.innerHeight * 0.75) {
+          setIsVisible(true);
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <Box
+      id="resume-section"
       sx={{
         padding: "2rem",
         display: "flex",
@@ -17,6 +36,9 @@ function Resume() {
           color: "black",
           textDecoration: "none",
           marginBottom: "20px",
+          opacity: isVisible ? 1 : 0,
+          transform: isVisible ? "translateY(0)" : "translateY(50px)",
+          transition: "opacity 1s ease, transform 1s ease",
         }}
       >
         Resume.

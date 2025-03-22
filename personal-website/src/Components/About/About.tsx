@@ -1,4 +1,5 @@
 import { Box, Typography } from "@mui/material";
+import { useEffect, useState } from "react";
 import aboutText from "./AboutText";
 
 function About() {
@@ -25,15 +26,36 @@ function About() {
     "xcode.png",
   ];
 
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const section = document.getElementById("about-title");
+      if (section) {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= window.innerHeight * 0.75) {
+          setIsVisible(true);
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <Box sx={{ padding: "2rem", display: "flex", flexDirection: "column" }}>
       <Typography
+        id="about-title"
         variant="h3"
         sx={{
           fontFamily: "monospace",
           fontWeight: 700,
           color: "black",
           marginBottom: "20px",
+          opacity: isVisible ? 1 : 0,
+          transform: isVisible ? "translateY(0)" : "translateY(50px)",
+          transition: "opacity 1s ease, transform 1s ease",
         }}
       >
         About.
@@ -42,7 +64,11 @@ function About() {
       <Typography
         variant="body1"
         gutterBottom
-        sx={{ fontFamily: "monospace", fontSize: "1.1rem", fontWeight: "600" }}
+        sx={{
+          fontFamily: "monospace",
+          fontSize: "1.1rem",
+          fontWeight: "600",
+        }}
       >
         {aboutText}
       </Typography>
