@@ -27,22 +27,16 @@ const App: React.FC = () => {
           padding: "8rem 10% 0 10%",
         }}
       >
-        <Box id="intro" sx={{ border: "2px red dashed" }}>
+        <Box id="intro">
           <Intro />
         </Box>
-        <Box id="about" sx={{ border: "2px red dashed" }}>
+        <Box id="about">
           <About />
         </Box>
-        <Box
-          id="resume"
-          sx={{
-            border: "2px red dashed",
-            marginBottom: "1000px",
-          }}
-        >
+        <Box id="resume">
           <Resume />
         </Box>
-        <Box id="contact" sx={{ border: "2px red dashed" }}>
+        <Box id="contact">
           <Contact />
         </Box>
 
