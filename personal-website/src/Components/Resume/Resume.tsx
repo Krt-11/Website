@@ -1,5 +1,6 @@
 import { Box, Typography, Link } from "@mui/material";
 import { useEffect, useState } from "react";
+import ResumeContent from "./ResumeContent";
 
 function Resume() {
   const [isVisible, setIsVisible] = useState(false);
@@ -67,7 +68,7 @@ function Resume() {
           Click here to download my resume as a PDF ↓
         </Link>
 
-        {/* future resume content will go here */}
+        <ResumeContent />
       </Box>
     </Box>
   );
