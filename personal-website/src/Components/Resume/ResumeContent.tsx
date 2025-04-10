@@ -1,7 +1,7 @@
 import { Box, Typography, IconButton, Collapse, Divider } from "@mui/material";
 import { useState } from "react";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import ExpandLessIcon from "@mui/icons-material/ExpandLess";
+import CollapsibleList from "./CollapsibleList";
 
 function CollapsibleSection({
   bullets,
@@ -25,10 +25,15 @@ function CollapsibleSection({
         <>
           <IconButton
             onClick={() => setExpanded(!expanded)}
-            sx={{ ml: 1, mt: -1 }}
+            sx={{
+              ml: 1,
+              mt: -1,
+              transition: "transform 0.3s ease",
+              transform: expanded ? "rotate(180deg)" : "rotate(0deg)",
+            }}
             size="small"
           >
-            {expanded ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+            <ExpandMoreIcon />
           </IconButton>
           <Collapse in={expanded} timeout="auto" unmountOnExit>
             <ul style={{ paddingLeft: "1rem", marginLeft: 0 }}>
@@ -48,7 +53,7 @@ export default function ResumeContent() {
   return (
     <Box
       sx={{
-        fontFamily: "Arial, sans-serif",
+        fontFamily: `"Segoe UI", "Helvetica Neue", "Arial", "sans-serif"`,
         border: "2px solid black",
         boxShadow: "0.5rem 0.5rem 0 orange",
         padding: "2rem",
@@ -56,6 +61,23 @@ export default function ResumeContent() {
         width: "90%",
         maxWidth: "800px",
         backgroundColor: "white",
+        ul: {
+          li: {
+            transition: "all 0.2s ease",
+            "&:hover": {
+              backgroundColor: "#f9f9f9",
+              paddingLeft: "0.25rem",
+            },
+          },
+        },
+        a: {
+          color: "inherit",
+          textDecoration: "underline",
+          transition: "color 0.2s ease",
+          "&:hover": {
+            color: "#ff6f00",
+          },
+        },
       }}
     >
       <Typography variant="h4" sx={{ fontWeight: 700, textAlign: "center" }}>
@@ -72,7 +94,6 @@ export default function ResumeContent() {
         </a>
       </Typography>
 
-      {/* Education Section */}
       <Divider sx={{ my: 3 }} />
       <Typography variant="h5" sx={{ mt: 3, fontWeight: 600 }}>
         Education
@@ -85,7 +106,6 @@ export default function ResumeContent() {
         May 2025
       </Typography>
 
-      {/* Work Experience Section */}
       <Divider sx={{ my: 3 }} />
       <Typography variant="h5" sx={{ mt: 3, fontWeight: 600 }}>
         Work Experience
@@ -111,7 +131,7 @@ export default function ResumeContent() {
         />
       </Box>
 
-      {/* Nationwide Children's Hospital */}
+      {/* Nationwide */}
       <Box sx={{ textAlign: "left", mt: 2 }}>
         <Typography sx={{ fontWeight: 600 }}>
           Nationwide Children’s Hospital | Software Development Intern | Mar
@@ -130,7 +150,7 @@ export default function ResumeContent() {
         />
       </Box>
 
-      {/* The Coder School */}
+      {/* Coder School */}
       <Box sx={{ textAlign: "left", mt: 2 }}>
         <Typography sx={{ fontWeight: 600 }}>
           The Coder School | Code Coach | Aug 2021 – May 2024
@@ -160,9 +180,7 @@ export default function ResumeContent() {
         />
       </Box>
 
-      {/* Skills & Technologies */}
       <Divider sx={{ my: 3 }} />
-
       <Typography variant="h5" sx={{ fontWeight: 600 }}>
         Skills & Technologies
       </Typography>
@@ -174,88 +192,101 @@ export default function ResumeContent() {
           mt: 1,
         }}
       >
-        <Box>
-          <Typography fontWeight={600}>Skills</Typography>
-          <ul style={{ paddingLeft: "1rem", marginLeft: 0 }}>
-            <li>Teamwork</li>
-            <li>Communication</li>
-            <li>Problem Solving</li>
-            <li>Time Management</li>
-            <li>Critical Thinking</li>
-            <li>Agile Methodologies</li>
-            <li>Leadership</li>
-            <li>Analytical Skills</li>
-            <li>Adaptability</li>
-            <li>Collaboration</li>
-            <li>Attention to Detail</li>
-            <li>Creativity</li>
-            <li>Public Speaking</li>
-            <li>Mentoring</li>
-            <li>Conflict Resolution</li>
-            <li>Decision Making</li>
-          </ul>
-        </Box>
-        <Box>
-          <Typography fontWeight={600}>Technologies</Typography>
-          <ul style={{ paddingLeft: "1rem", marginLeft: 0 }}>
-            <li>React</li>
-            <li>CSS / SCSS</li>
-            <li>HTML</li>
-            <li>Java</li>
-            <li>Python</li>
-            <li>AWS</li>
-            <li>Node.js</li>
-            <li>JavaScript / TypeScript</li>
-            <li>SQL</li>
-            <li>Git</li>
-            <li>Docker</li>
-            <li>Figma</li>
-            <li>REST APIs</li>
-            <li>Kotlin</li>
-            <li>Swift</li>
-            <li>Lua</li>
-            <li>C / C++</li>
-            <li>Android Studio / Xcode</li>
-          </ul>
-        </Box>
+        <CollapsibleList
+          title="Skills"
+          items={[
+            "Teamwork",
+            "Communication",
+            "Problem Solving",
+            "Time Management",
+            "Critical Thinking",
+            "Agile Methodologies",
+            "Leadership",
+            "Analytical Skills",
+            "Adaptability",
+            "Collaboration",
+            "Attention to Detail",
+            "Creativity",
+            "Public Speaking",
+            "Mentoring",
+            "Conflict Resolution",
+            "Decision Making",
+          ]}
+        />
+        <CollapsibleList
+          title="Technologies"
+          items={[
+            "React",
+            "HTML/CSS",
+            "AWS",
+            "Python",
+            "SQL",
+            "CSS / SCSS",
+            "Java",
+            "Node.js",
+            "JavaScript / TypeScript",
+            "Git",
+            "Docker",
+            "Figma",
+            "REST APIs",
+            "Kotlin",
+            "Swift",
+            "Lua",
+            "C / C++",
+            "Android Studio / Xcode",
+          ]}
+        />
       </Box>
 
-      {/* Projects */}
       <Divider sx={{ my: 3 }} />
       <Typography variant="h5" sx={{ mt: 4, fontWeight: 600 }}>
         Projects
       </Typography>
 
       <Box sx={{ textAlign: "left" }}>
-        <Typography fontWeight={600}>InternOverflow</Typography>
-        <Typography>
-          Hackathon project at JPMorgan to help interns onboard faster via
-          anonymous Q&A and mentoring.
-        </Typography>
-        <Box sx={{ fontStyle: "italic", mb: 2 }}>
-          Skills: React.js · Python · Front-End Design · Backend Development
-        </Box>
-
-        <Typography fontWeight={600}>Matrix Calculator</Typography>
-        <Typography>
-          Built a matrix reduction tool for linear algebra using Python and
-          shared with professors to aid student learning.
-        </Typography>
-        <Box sx={{ fontStyle: "italic", mb: 2 }}>Skills: Python · Jupyter</Box>
-
-        <Typography fontWeight={600}>AI Battleship Game</Typography>
-        <Typography>
-          Engineered a smart AI opponent for a Battleship game with varying
-          difficulty and feedback-driven improvements.
-        </Typography>
-        <Box sx={{ fontStyle: "italic", mb: 2 }}>Skills: Python · MATLAB</Box>
-
-        <Typography fontWeight={600}>Glossary Dictionaries</Typography>
-        <Typography>
-          Java program that parses definitions and creates linked HTML pages for
-          learning vocabulary with styled UI.
-        </Typography>
-        <Box sx={{ fontStyle: "italic" }}>Skills: Java · HTML · CSS</Box>
+        {[
+          {
+            title: "InternOverflow",
+            description:
+              "Hackathon project at JPMorgan to help interns onboard faster via anonymous Q&A and mentoring.",
+            skills:
+              "React.js · Python · Front-End Design · Backend Development",
+          },
+          {
+            title: "Matrix Calculator",
+            description:
+              "Built a matrix reduction tool for linear algebra using Python and shared with professors to aid student learning.",
+            skills: "Python · Jupyter",
+          },
+          {
+            title: "AI Battleship Game",
+            description:
+              "Engineered a smart AI opponent for a Battleship game with varying difficulty and feedback-driven improvements.",
+            skills: "Python · MATLAB",
+          },
+          {
+            title: "Glossary Dictionaries",
+            description:
+              "Java program that parses definitions and creates linked HTML pages for learning vocabulary with styled UI.",
+            skills: "Java · HTML · CSS",
+          },
+        ].map((project, idx) => (
+          <Box key={idx} sx={{ mb: 2 }}>
+            <Typography
+              fontWeight={600}
+              sx={{
+                transition: "color 0.2s",
+                "&:hover": { color: "#ff6f00" },
+              }}
+            >
+              {project.title}
+            </Typography>
+            <Typography>{project.description}</Typography>
+            <Box
+              sx={{ fontStyle: "italic" }}
+            >{`Skills: ${project.skills}`}</Box>
+          </Box>
+        ))}
       </Box>
     </Box>
   );
