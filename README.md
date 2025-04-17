@@ -154,8 +154,8 @@ Then visit `https://yourusername.github.io/personal-website/`
 
 Feel free to connect or reach out through:
 
-- [LinkedIn](https://linkedin.com/in/yourlinkedin)
-- [GitHub](https://github.com/yourgithub)
-- Email: your.email@example.com
+- [LinkedIn](https://linkedin.com/in/krutin-shukla)
+- [GitHub](https://github.com/Krt-11)
+- Email: krutinrs@gmail.com
 
 Thank you for checking out my personal website repository!
