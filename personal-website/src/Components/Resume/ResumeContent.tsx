@@ -187,9 +187,10 @@ export default function ResumeContent() {
       <Box
         sx={{
           display: "grid",
-          gridTemplateColumns: "1fr 1fr",
+          gridTemplateColumns: { xs: "1fr", sm: "1fr 1fr" },
           textAlign: "left",
           mt: 1,
+          gap: "1rem",
         }}
       >
         <CollapsibleList
